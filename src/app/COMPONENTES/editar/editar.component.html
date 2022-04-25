@@ -1,0 +1,12 @@
+<div class="container">
+    <label for="nombre">Nombre: </label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="actividadActual.nombre">
+    <br>
+    <label for="estado">Estado: </label>
+    <input type="checkbox" id="estado" name="estado" [(ngModel)]="actividadActual.estado">
+    <br>
+    <label for="idEmpleado">idEmpleado</label>
+    <input type="number" name="idEmpleado" id="idEmpleado" [(ngModel)]="actividadActual.idEmpleado">
+
+    <button class="btn btn-primary" (click)="guardar()">Guardar cambios</button>
+</div>

@@ -1,0 +1,13 @@
+<div class="container">
+    <form action="">
+        <label for="nombre">nombre </label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="actividadNueva.nombre">
+        <br>
+        <label for="estado">Estado</label>
+        <input type="checkbox" name="estado" id="estado" [(ngModel)]="actividadNueva.estado">
+        <br>
+        <label for="idEmpleado">idEmpleado</label>
+        <input type="number" name="idEmpleado" id="idEmpleado" [(ngModel)]="actividadNueva.idEmpleado">
+        <button class="btn btn-primary" (click)="agregarActividad()">Guardar</button>
+    </form>
+</div>

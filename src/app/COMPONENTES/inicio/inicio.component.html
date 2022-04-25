@@ -1,0 +1,30 @@
+<div class="container">
+    <button class="btn btn-primary" [routerLink]="['/agregar']">Agregar nueva actividad</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Fecha de ejecución</th>
+                <th scope="col">Días de retraso</th>
+                <th scope="col">Empleado</th>
+                <th scope="col">Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let actividad of lista">
+                <td>{{actividad.id}}</td>
+                <td> {{actividad.nombre}}</td>
+                <td>{{actividad.estado}}</td>
+                <td>{{actividad.fechaEjecucion}}</td>
+                <td>{{actividad.diasRetraso}}</td>
+                <td>{{actividad.idEmpleado}}</td>
+                <td>
+                    <button class="btn btn-warning" [routerLink]="['/editar/',actividad.id]">Modificar</button>
+                    <button class="btn btn-danger" (click)="eliminar(actividad.id)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
